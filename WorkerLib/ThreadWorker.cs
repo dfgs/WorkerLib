@@ -25,6 +25,10 @@ namespace WorkerLib
 		private float cpuUsage;
 		private static long oneSecondTicks = TimeSpan.FromSeconds(1).Ticks;
 		private int stopTimeout;
+		protected int StopTimeout
+		{
+			get { return stopTimeout; }
+		}
 
 		private ManualResetEvent exitEvent;
 
@@ -71,7 +75,7 @@ namespace WorkerLib
 			
 		}
 
-		protected override bool OnStartProcessing()
+		protected override  bool OnStartProcessing()
 		{
 			base.OnStartProcessing();
 			WriteLog(LogLevels.Debug, "Reset exit event");
@@ -110,7 +114,7 @@ namespace WorkerLib
 			return true;
 		}
 
-		protected override bool OnStopProcessing()
+		protected override  bool OnStopProcessing()
 		{
 			base.OnStopProcessing();
 			WriteLog(LogLevels.Debug, "Trigger quit event");

@@ -49,6 +49,7 @@
     <Compile Include="QueueItem.cs" />
     <Compile Include="PoolProcessorWorker.cs" />
     <Compile Include="QueueWorker.cs" />
+    <Compile Include="AsyncWorker.cs" />
     <Compile Include="Worker.cs" />
     <Compile Include="SchedulerWorker.cs" />
     <Compile Include="ListenerWorker.cs" />
